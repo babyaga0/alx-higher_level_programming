@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def display_elements(input_list=[], count=0):
+def safe_print_list(input_list=[], count=0):
     """Prints a specified number of elements from a list.
 
     Args:
