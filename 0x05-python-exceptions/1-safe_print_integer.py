@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 
-def safe_print_list(my_list=[], x=0):
+def print_safe_integer(input_value):
+    """Prints an integer using "{:d}".format().
 
-    ret = 0
-    for i in range(x):
-        try:
-            print("{}".format(my_list[i]), end="")
-            ret += 1
-        except IndexError:
-            break
-    print("")
-    return (ret)
+    Args:
+        input_value (int): The integer to be printed.
+
+    Returns:
+        Returns True if the integer is successfully printed, otherwise False if a TypeError or ValueError occurs.
+    """
+    try:
+        print("{:d}".format(input_value))
+        return True
+    except (TypeError, ValueError):
+        return False
+
